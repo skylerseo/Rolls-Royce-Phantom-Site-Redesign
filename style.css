@@ -1,8 +1,35 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 
+:root {
+  /* text color */
+  --text-color-white: #f1f1f1;
+  --text-color-black: #070707;
+
+  /* text size */
+  --font-size-big: 26px;
+  --font-size-medium: 16px;
+  --font-size-regular: 14px;
+  --font-size-small: 12px;
+  --font-size-micro: 11px;
+
+  /* font-weight */
+  --font-weight-bold: 700;
+  --font-weight-Mediun: 500;
+  --font-weight-regular: 400;
+  --font-weight-light: 300;
+  --font-weight-thin: 100;
+
+  /* letter-spacing */
+  --letter-spacing: -0.03em;
+}
+
 html,
 body {
   background-color: #ececec;
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
 }
 
@@ -23,4 +50,198 @@ body {
   height: 1px;
   overflow: hidden;
   visibility: hidden;
+}
+
+dd {
+  margin-left: 0;
+}
+
+.section {
+  margin: 0 16px;
+}
+
+/* Logo */
+.logo__image {
+  width: 34px;
+  height: auto;
+  display: block;
+  position: absolute;
+  right: 50%;
+  top: -10px;
+  transform: translate(50%, 50%);
+}
+
+/* Nabvar */
+#navbar {
+  display: none;
+}
+
+/* Home */
+#home {
+  padding-bottom: 10px;
+  color: var(--text-color-black);
+}
+
+.home__image {
+  width: 100%;
+  height: auto;
+}
+
+#home dl {
+  text-align: center;
+}
+
+#home dt {
+  font-size: var(--font-size-big);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--letter-spacing);
+  line-height: 100%;
+  margin-bottom: 16px;
+}
+
+#home dd {
+  font-size: var(--font-size-regular);
+  font-weight: var(--font-weight-light);
+  letter-spacing: var(--letter-spacing);
+  margin-bottom: 40px;
+}
+
+.home__dd-enter {
+  display: block;
+  width: 1px;
+  height: 8px;
+}
+
+/* Intro */
+#intro {
+  color: var(--text-color-white);
+}
+
+.intro__first {
+  position: relative;
+}
+
+.intro__first img {
+  width: 100%;
+  height: auto;
+}
+
+.intro__first-text {
+  position: absolute;
+  top: -5px;
+}
+
+/* Description */
+#description {
+  padding-bottom: 40px;
+}
+
+/* Gallery */
+#gallery {
+  padding-bottom: 40px;
+}
+
+/* Spec */
+#spec {
+  padding-bottom: 15px;
+}
+
+.spec__title {
+  font-size: var(--font-size-big);
+  font-weight: var(--font-weight-light);
+  letter-spacing: var(--letter-spacing);
+  margin-bottom: 20px;
+}
+
+.spec__size-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.spec__size-image img {
+  display: block;
+}
+
+.spec__detail {
+  width: 100%;
+  height: auto;
+  background: url('./assets/spec-background.png') center/cover no-repeat;
+  background-color: transparent;
+}
+
+.spec__detail dl {
+  margin: 0 16px;
+  border-bottom: 1px solid var(--text-color-black);
+}
+
+/* Contact */
+#contact {
+  width: 100%;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+.contact__title {
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-Mediun);
+  margin-left: 16px;
+  margin-bottom: 10px;
+}
+
+.contact__all-info {
+  display: flex;
+}
+
+.contact__left {
+  width: 60%;
+  height: auto;
+  margin-left: 16px;
+}
+
+.contact__open {
+  display: flex;
+}
+
+.contact__open-title {
+  font-size: var(--font-size-regular);
+  font-weight: var(--font-weight-regular);
+  margin-right: 12px;
+}
+
+.contact__open-time {
+  font-size: var(--font-size-small);
+}
+
+.contact__addr {
+  font-size: var(--font-size-micro);
+}
+
+.contact__right {
+  width: 40%;
+  height: auto;
+  margin-right: 16px;
+}
+
+.contact__right dt {
+  font-size: var(--font-size-regular);
+}
+
+.contact__right dd {
+  font-size: var(--font-size-small);
+}
+
+.contact__right dt,
+dd {
+  display: inline-block;
+}
+
+#contact button {
+  width: 100px;
+  height: 36px;
+  border: none;
+  border-radius: 100px;
+  color: var(--text-color-white);
+  font-size: var(--font-size-medium);
+  background-color: #1a1a1a;
 }
