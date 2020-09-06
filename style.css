@@ -1,5 +1,179 @@
 @import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css);
 
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
 :root {
   /* text color */
   --text-color-white: #f1f1f1;
@@ -30,7 +204,6 @@ body {
 
 * {
   box-sizing: border-box;
-  margin: 0;
 }
 
 .text-kor {
@@ -73,12 +246,13 @@ dd {
 
 /* Nabvar */
 #navbar {
+  color: var(--text-color-black);
   display: none;
 }
 
 /* Home */
 #home {
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   color: var(--text-color-black);
 }
 
@@ -114,35 +288,71 @@ dd {
 
 /* Intro */
 #intro {
-  color: var(--text-color-white);
+  color: var(--text-color-black);
+  padding-bottom: 20px;
 }
 
-.intro__first {
-  position: relative;
+.intro__title {
+  font-size: var(--font-size-big);
+  font-weight: var(--font-weight-light);
+  letter-spacing: var(--letter-spacing);
+  margin-bottom: 20px;
+  margin-left: 16px;
 }
 
-.intro__first img {
+.intro__first,
+.intro__second {
+  margin-bottom: 30px;
+}
+
+.intro__first img,
+.intro__second img {
   width: 100%;
   height: auto;
 }
 
-.intro__first-text {
-  position: absolute;
-  top: -5px;
+/* Design */
+#design {
+  color: var(--text-color-black);
+  padding-bottom: 50px;
 }
 
-/* Description */
-#description {
-  padding-bottom: 40px;
+.design__title {
+  font-size: var(--font-size-big);
+  font-weight: var(--font-weight-light);
+  letter-spacing: var(--letter-spacing);
+  margin-bottom: 20px;
+  margin-left: 16px;
+}
+
+#design img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 8px;
 }
 
 /* Gallery */
 #gallery {
-  padding-bottom: 40px;
+  color: var(--text-color-black);
+  padding-bottom: 60px;
+}
+
+.gallery__title {
+  font-size: var(--font-size-big);
+  font-weight: var(--font-weight-light);
+  letter-spacing: var(--letter-spacing);
+  margin-bottom: 20px;
+  margin-left: 16px;
+}
+
+#gallery img {
+  width: 100%;
+  height: auto;
 }
 
 /* Spec */
 #spec {
+  color: var(--text-color-black);
   padding-bottom: 15px;
 }
 
@@ -159,24 +369,30 @@ dd {
   margin-bottom: 20px;
 }
 
-.spec__size-image img {
+.spec__size-image img,
+.spec__detail-image img {
   display: block;
 }
 
-.spec__detail {
+.spec__detail-image {
+  width: 100%;
+  height: auto;
+}
+
+/* .spec__detail {
   width: 100%;
   height: auto;
   background: url('./assets/spec-background.png') center/cover no-repeat;
   background-color: transparent;
 }
-
 .spec__detail dl {
   margin: 0 16px;
   border-bottom: 1px solid var(--text-color-black);
-}
+} */
 
 /* Contact */
 #contact {
+  color: var(--text-color-black);
   width: 100%;
   height: auto;
   padding-bottom: 20px;
@@ -186,31 +402,33 @@ dd {
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-Mediun);
   margin-left: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 .contact__all-info {
   display: flex;
+  margin: 0px 16px;
 }
 
 .contact__left {
-  width: 60%;
+  width: 55%;
   height: auto;
-  margin-left: 16px;
 }
 
 .contact__open {
   display: flex;
+  margin-bottom: 30px;
 }
 
 .contact__open-title {
-  font-size: var(--font-size-regular);
+  font-size: var(--font-size-small);
   font-weight: var(--font-weight-regular);
   margin-right: 12px;
 }
 
 .contact__open-time {
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-micro);
+  margin-bottom: 7px;
 }
 
 .contact__addr {
@@ -218,22 +436,38 @@ dd {
 }
 
 .contact__right {
-  width: 40%;
+  width: 45%;
   height: auto;
-  margin-right: 16px;
+  margin-left: 8px;
+  /* margin-right: 8px; */
+}
+
+.contact__right dl {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.contact__right dl div {
+  margin-bottom: 8px;
 }
 
 .contact__right dt {
-  font-size: var(--font-size-regular);
+  font-size: var(--font-size-small);
+  margin-right: 5px;
 }
 
 .contact__right dd {
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-micro);
 }
 
 .contact__right dt,
 dd {
-  display: inline-block;
+  display: inline;
+}
+
+.contact__btn {
+  width: 100px;
+  margin: 0 auto;
 }
 
 #contact button {
