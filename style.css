@@ -485,6 +485,18 @@ dd {
 }
 
 @media screen and (min-width: 768px) {
+  :root {
+    /* text size */
+    --font-size-big: 30px;
+    --font-size-medium: 24px;
+    --font-size-regular: 18px;
+    --font-size-small: 14px;
+    --font-size-micro: 12px;
+
+    /* width */
+    --width-size-max: 1440px;
+  }
+
   /* Logo */
   .logo__image {
     width: 80px;
@@ -493,6 +505,34 @@ dd {
 
   /* Nabvar */
   #navbar {
-    display: block;
+    max-width: var(--width-size-max);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    font-size: var(--font-size-medium);
+    z-index: 5;
+  }
+
+  .navbar__links {
+    position: absolute;
+    top: 118px;
+  }
+
+  .navbar__links a:first-child,
+  .navbar__links a:nth-child(2) {
+    margin-right: 80px;
+  }
+
+  .navbar__links a:nth-child(3) {
+    margin-right: 300px;
+  }
+
+  .navbar__links a:nth-child(4) {
+    margin-left: 0;
+  }
+
+  .navbar__links a:nth-child(5) {
+    margin-left: 165px;
   }
 }
