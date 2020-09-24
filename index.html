@@ -19,14 +19,16 @@
 
   <!-- Navbar -->
   <nav id="navbar" class="text-eng">
-    <div class="navbar__links">
-      <a href="#">HOME</a>
-      <a href="#">INTRO</a>
-      <a href="#">DESIGN</a>
-      <a href="#">GALLERY</a>
-      <a href="#">VIEW SPECS</a>
-    </div>
-
+    <ul class="navbar__links">
+      <li class="navbar__link_item active" data-link="#home">HOME</li>
+      <li class="navbar__link_item" data-link="#intro">INTRO</li>
+      <li class="navbar__link_item" data-link="#design">DESIGN</li>
+      <li class="navbar__link_item" data-link="#gallery">GALLERY</li>
+      <li class="navbar__link_item" data-link="#spec">VIEW SPECS</li>
+    </ul>
+    <!-- Toggle Button -->
+    <input class="nav-toggle" id="nav-toggle" type="checkbox">
+    <label class="navicon" for="nav-toggle"><span class="navicon-bar"></span></label>
   </nav>
 
   <!-- Home -->
